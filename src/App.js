@@ -16,10 +16,7 @@ class App extends React.Component {
 
   }
 
-  scroll =()=>{
-    const elemento= document.querySelector('.jumbotron');
-    elemento.scrollIntoView({block: "end", behavior: "instant"});
-  }
+
 
   paginaAnterior = ()=>{   
     if(this.state.pagina==0){
@@ -31,7 +28,7 @@ class App extends React.Component {
     pagina-=50;
     this.setState({pagina},
       ()=>{this.componentDidMount(`https://api.mercadolibre.com/sites/MCO/search?q=${this.state.entrada}&offset=${this.state.pagina}`)
-        this.scroll();
+        
       });
     
   }
@@ -41,7 +38,7 @@ class App extends React.Component {
     pagina=pagina+50;
     this.setState({pagina},
       ()=>{this.componentDidMount(`https://api.mercadolibre.com/sites/MCO/search?q=${this.state.entrada}&offset=${this.state.pagina}`)
-        this.scroll();
+       
       });
   }
 
@@ -74,14 +71,14 @@ class App extends React.Component {
       <div className="App"> 
       <img src={LOGO1}  />
       <div className="app container">
-        <div className="jumbotron">
+   
           <p className="lead text-center">
           </p>
           
           <Buscador 
           entradaBusqueda  ={this.entradaBusqueda}          
           />
-        </div>
+    
         <div className="row justify-content-center ">
         <Resultado 
             firstSearch={this.firstSearch}

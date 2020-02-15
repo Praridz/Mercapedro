@@ -11,10 +11,10 @@ class Buscador extends React.Component{
             <form onSubmit={this.obtenerDatos}>
                 
             <div className="row">
-                <div className="form-group col-md-8">
+                <div className="form-group col-md-11">
                     <input ref={this.busquedaRef} type="text" className="form-control form-control-lg" placeholder="Ingrese el producto a buscar"/>
                 </div>
-                <div className="form-group col-md-4">
+                <div className="form-group col-md-1">
                     <input type="submit" className="btn btn--lg btn-block btn-info"  value="Buscar"/>
                 </ div>
             </div>
