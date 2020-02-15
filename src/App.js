@@ -70,6 +70,7 @@ class App extends React.Component {
     return (
       <div className="App"> 
       <img src={LOGO1}  />
+      <h1>Rios Dominguez</h1>
       <div className="app container">
    
           <p className="lead text-center">
