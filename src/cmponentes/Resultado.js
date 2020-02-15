@@ -22,7 +22,7 @@ class Resultado extends React.Component{
                 paginaSiguiente={this.props.paginaSiguiente}
 
                 />
-                <div className="col-s12 p-8 row">
+                <div className="col-s12 p-8 row col-md-10 ">
                     {
                         productos.map(unproducto=>(
                             <Producto

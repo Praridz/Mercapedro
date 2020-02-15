@@ -82,7 +82,7 @@ class App extends React.Component {
           entradaBusqueda  ={this.entradaBusqueda}          
           />
         </div>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center ">
         <Resultado 
             firstSearch={this.firstSearch}
             productos={this.state.productos} 
