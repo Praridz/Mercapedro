@@ -1,3 +1,4 @@
+  
 import React from 'react';
 
 const Producto = (props) =>{
@@ -12,9 +13,9 @@ const Producto = (props) =>{
         <div className="card" >
             <img src={thumbnail}  className="card-img-top" width="100" height="150" />
             <div className="card-body">
-                <p className="card-text">{title}</p>
-                <p className="card-text">Precio:  {price} </p>
-                <p className="card-text">Vendedor: {seller.id} </p>
+                <p className="card-text" >{title}</p>
+                <p className="card-text">Precio:  {price} Cop</p>
+                <p className="card-text">idVendedor: {seller.id} </p>
             </div>
 
         </div>

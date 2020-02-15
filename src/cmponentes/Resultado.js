@@ -1,30 +1,42 @@
+  
 import React, {Component} from 'react';
 import Producto from "./Producto";
+import Pagina from "./Pagina";
 
 
 class Resultado extends React.Component{
 
-    mostrarImagenes=()=>{
+    mostrarProductos=()=>{
         
-        const imagenes= this.props.imagenes;
-        if(imagenes.length===0){
+        const productos= this.props.productos;
+        const firstSearch= this.props.firstSearch;
+        if(productos.length===0){
             return null;
         } 
-        console.log(imagenes);
+        console.log(productos);
 
         return (
             <React.Fragment>
+                 <Pagina
+                paginaAnterior={this.props.paginaAnterior}
+                paginaSiguiente={this.props.paginaSiguiente}
+
+                />
                 <div className="col-s12 p-8 row">
                     {
-                        imagenes.map(imagen=>(
+                        productos.map(unproducto=>(
                             <Producto
-                            key={imagen.id}
-                            producto={imagen}
+                            key={unproducto.id}
+                            producto={unproducto}
                             />
                         ))
                     }
                 </div>
-               
+                <Pagina
+                paginaAnterior={this.props.paginaAnterior}
+                paginaSiguiente={this.props.paginaSiguiente}
+
+                />
             </React.Fragment>
         )
 
@@ -32,7 +44,7 @@ class Resultado extends React.Component{
 
     render(){
         return (
-            <React.Fragment>{this.mostrarImagenes()}</React.Fragment>
+            <React.Fragment>{this.mostrarProductos()}</React.Fragment>
             )
     }
 }
